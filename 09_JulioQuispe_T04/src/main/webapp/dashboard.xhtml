@@ -1,0 +1,53 @@
+<html xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+ >
+<h:head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>LetsGo</title>
+
+</h:head>
+<h:body >
+    <center><h1>Hola mundo, retomamos Primefaces con ChartJS</h1></center>
+    <p><b>En esta demo usaremos un database sample DVD Rental para representar los datos con componentes de primefaces, específicamente Chart JS.</b></p>
+    <div class="card">
+        <h2>Basic</h2>
+        <p><b>Tarifa de alquiler promedio por cada género.</b></p>
+        <p:barChart model="#{dashboardC.barModel}" style="width: 100%; height: 500px;"/>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <div class="card">
+        <h2>Horizontal</h2>
+        <p><b>PROBLEMA: Cantidad de usuarios que han alquilado DVD por género.</b></p>
+        <p:barChart model="#{dashboardC.hbarModel}" style="width: 100%; height: 500px;"/>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <div class="card">
+        <h2>Mixed</h2>
+        <p><b>PROBLEMA: Ventas y  BD de clientes totales por país.</b></p>
+        <p:barChart model="#{dashboardC.mixedModel}" style="width: 100%; height: 600px;"/>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <div class="card">
+        <h2>Donut</h2>
+        <p><b>PROBLEMA: Mostrar los 10 países con más ventas.</b></p>
+        <p:donutChart model="#{dashboardTwoC.donutModel}" style="width: 100%; height: 500px;"/>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <div class="card">
+        <h2>Polar Area</h2>
+        <p><b>PROBLEMA: Mostrar los 10 países con más clientes.</b></p>
+        <p:polarAreaChart model="#{dashboardTwoC.polarAreaModel}" style="width: 100%; height: 500px;"/>
+    </div>
+
+</h:body>
+</html>
